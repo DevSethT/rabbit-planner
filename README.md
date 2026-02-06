@@ -1,16 +1,89 @@
-# React + Vite
+# 🐇 Rabbit Planner
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Rabbit Planner is a personal task and planning app built with **React**.  
+The goal of this project is to create a simple, flexible planner that I can actually use day-to-day, while also strengthening my React fundamentals.
 
-Currently, two official plugins are available:
+This project is being built iteratively — starting small and growing over time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Motivation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I wanted to build something that:
+- I would personally use every day
+- helps with planning tasks without strict time pressure
+- allows creative freedom in UI and features
+- improves my understanding of React, component structure, and state
 
-## Expanding the ESLint configuration
+Rabbit Planner is not about perfection — it’s about usability and learning.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React**
+- **Vite**
+- **JavaScript**
+- **CSS**
+- **Git & GitHub**
+
+---
+
+## 📁 Project Structure
+
+The app is structured using reusable, modular components:
+
+- `Header` – App title and task controls  
+- `TaskCard` – Individual task display  
+- `Footer` – App footer (future use)  
+
+Styles are scoped per component for clarity and maintainability.
+
+---
+
+## 🚧 Current Status
+
+This project is **in active development**.
+
+Current focus:
+- Component structure
+- Layout and styling
+- Building a solid foundation before adding logic
+
+Planned features (subject to change):
+- Create and manage tasks
+- Task priorities
+- Mark tasks as completed
+- Daily task reset
+- Local storage persistence
+- Mobile-friendly design
+
+---
+
+## 📌 Future Goals
+
+- Improve CSS skills and layout confidence
+- Practice React state management
+- Potentially add backend support later for syncing across devices
+
+---
+
+## 🧠 What I’m Learning
+
+- React component architecture
+- State vs props
+- Clean project structure
+- Working efficiently with the terminal
+- Iterative development without burnout
+
+---
+
+## 📸 Screenshots
+
+_(Coming soon)_
+
+---
+
+## 📄 License
+
+This project is for personal learning and experimentation.
