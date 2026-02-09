@@ -1,17 +1,26 @@
-.header{
-    display: flex;
-
-    width: 100%;
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-bottom: solid 1px grey;
 }
 
-.header__tittle{
-
+.header__title {
 }
 
-.header__span{
-    margin: auto;
+.header__span {
+  margin: auto;
 }
 
-.header__btn{
-    justify-self: end;
+.header__btn {
+  position: absolute;
+  right: 0;
+  align-self: center;
+  background: none;
+  border: none;
+}
+
+.header__btn:hover {
+  cursor: pointer;
+  color: aqua;
 }
