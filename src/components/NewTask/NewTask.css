@@ -1,0 +1,76 @@
+.newTask__ {
+}
+
+.newTask__background {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+.newTask__modal {
+  background-color: azure;
+  margin: auto;
+  padding: 10px;
+  border: solid black 1px;
+}
+
+.newTask__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.newTask__cls-btn {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  border: none;
+  right: 5px;
+  top: 5px;
+}
+
+.newTask__name-input {
+  margin-top: 30px;
+  border: none;
+}
+
+.newTask__description-input {
+  border: none;
+}
+
+.newTask__priority-box {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.newTask__name-label {
+}
+
+.newTask__description-label {
+}
+
+.newTask__priority-text {
+}
+
+.newTask__priority-selection {
+}
+
+.newTask__create-btn {
+  align-self: center;
+  border: solid 1px black;
+  box-shadow: none;
+  transition: 0.3 ease;
+}
+
+.newTask__create-btn:hover {
+  cursor: pointer;
+  background-color: green;
+  box-shadow: 0 10px 20px red;
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import Header from "../Header/Header.jsx";
 import TaskCard from "../TaskCard/TaskCard.jsx";
+import NewTask from "../NewTask/NewTask.jsx";
 
 const STORAGE_KEY = "rabbit_planner_tasks";
 
@@ -58,6 +59,7 @@ function App() {
       {orderedTasks.map((task) => (
         <TaskCard key={task.id} task={task} onToggle={handleCompleted} />
       ))}
+      <NewTask />
     </>
   );
 }
