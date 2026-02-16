@@ -41,7 +41,7 @@ function NewTask() {
                 name="priority"
                 className="newTask__priority-selection"
               />
-              Medium
+              Moderate
             </label>
             <label htmlFor="low" className="newTask__label">
               <input

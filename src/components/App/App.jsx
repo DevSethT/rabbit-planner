@@ -54,13 +54,15 @@ function App() {
   ];
 
   return (
-    <>
-      <Header />
-      {orderedTasks.map((task) => (
-        <TaskCard key={task.id} task={task} onToggle={handleCompleted} />
-      ))}
+    <div className="page">
+      <div className="page__content">
+        <Header />
+        {orderedTasks.map((task) => (
+          <TaskCard key={task.id} task={task} onToggle={handleCompleted} />
+        ))}
+      </div>
       <NewTask />
-    </>
+    </div>
   );
 }
 

@@ -10,10 +10,12 @@
   background: rgba(0, 0, 0, 0.6);
 }
 .newTask__modal {
+  border-radius: 12px;
   background-color: azure;
   margin: auto;
   padding: 10px;
   border: solid black 1px;
+  width: 50%;
 }
 
 .newTask__form {
