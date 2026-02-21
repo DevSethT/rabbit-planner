@@ -1,9 +1,11 @@
 import "./TaskCard.css";
 
-function TaskCard({ task, onToggle }) {
-  console.log(task);
+function TaskCard({ task, onToggle, onDelete }) {
   return (
     <div className={`card ${task.completed ? "card--done" : ""}`}>
+            <button type="button" onClick={() => onDelete(task.id)}>
+        Delete
+      </button>
       <div className="card__content">
         <div className="card__info">
           <h2 className="card__title">{task.name}</h2>
