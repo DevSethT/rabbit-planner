@@ -1,6 +1,4 @@
 .header {
-  position: relative;
-  display: flex;
   width: 100%;
   border-bottom: solid 1px grey;
 }
@@ -13,14 +11,18 @@
 }
 
 .header__btn {
-  position: absolute;
-  right: 0;
-  align-self: center;
   background: none;
   border: none;
+  margin-bottom: 10px;
 }
 
 .header__btn:hover {
   cursor: pointer;
   color: aqua;
+}
+
+@media screen and (max-width: 500px) {
+  .header{
+  }
+  
 }

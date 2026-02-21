@@ -3,9 +3,6 @@ import "./TaskCard.css";
 function TaskCard({ task, onToggle, onDelete }) {
   return (
     <div className={`card ${task.completed ? "card--done" : ""}`}>
-            <button type="button" onClick={() => onDelete(task.id)}>
-        Delete
-      </button>
       <div className="card__content">
         <div className="card__info">
           <h2 className="card__title">{task.name}</h2>
@@ -23,7 +20,11 @@ function TaskCard({ task, onToggle, onDelete }) {
             />
           </label>
         </div>
+        
       </div>
+      <button className="card__delete-btn" type="button" onClick={() => onDelete(task.id)}>
+        Delete
+      </button>
     </div>
   );
 }
