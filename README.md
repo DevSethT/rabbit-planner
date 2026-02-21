@@ -1,3 +1,6 @@
+The site is live here:[https://devsetht.github.io/rabbit-planner/]
+but is still a work in progress 
+
 # 🐇 Rabbit Planner
 
 Rabbit Planner is a personal task and planning app built with **React**.  
