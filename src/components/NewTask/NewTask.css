@@ -1,78 +1,199 @@
-.newTask__ {
-}
-
 .newTask__background {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-.newTask__modal {
-  border-radius: 12px;
-  background-color: azure;
-  margin: auto;
-  padding: 10px;
-  border: solid black 1px;
-  width: 50%;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(3px);
+  z-index: 999;
 }
 
+/* Modal card */
+.newTask__modal {
+  width: min(520px, 100%);
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  padding: 18px;
+}
+
+/* Form layout */
 .newTask__form {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
+  gap: 14px;
+  align-items: stretch;
+}
+
+/* Close button */
+.newTask__header {
+  position: relative;
 }
 
 .newTask__cls-btn {
-  height: 20px;
-  width: 20px;
   position: absolute;
-  border: none;
-  right: 5px;
   top: 5px;
+  right: 10px;
+
+  height: 34px;
+  width: 34px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  background: #fff;
+  color: #111;
+  line-height: 1;
+
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
 }
 
-.newTask__name-input {
-  margin-top: 30px;
-  border: none;
+.newTask__cls-btn:hover {
+  background: rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
 }
 
-.newTask__description-input {
-  border: none;
+/* Inputs section */
+.newTask__input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 10px; /* gives breathing room under the close button */
 }
 
+.newTask__input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* Text inputs */
+.newTask__input {
+  width: 95%;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.newTask__input:focus {
+  border-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.08);
+}
+
+/* Only if you need special tweaks later */
+
+/* .newTask__name-input {} */
+/* .newTask__description-input {} */
+
+/* Priority section */
 .newTask__priority-box {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   gap: 10px;
-  justify-content: center;
   align-items: center;
-}
-
-.newTask__name-label {
-}
-
-.newTask__description-label {
+  justify-content: center;
+  padding: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.02);
 }
 
 .newTask__priority-text {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.75);
+  width: 100%;
 }
 
-.newTask__priority-selection {
+/* Radio labels as pills */
+.newTask__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 10px;
+  border-radius: 999px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition:
+    transform 0.12s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
 }
 
+.newTask__label:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Make the radio a bit nicer without going crazy */
+.newTask__label input[type="radio"] {
+  margin: 0;
+  transform: scale(1.05);
+}
+
+/* Create button */
 .newTask__create-btn {
-  align-self: center;
-  border: solid 1px black;
-  box-shadow: none;
-  transition: 0.3 ease;
+  margin-top: 4px;
+  width: 100%;
+  padding: 12px 14px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
 }
 
 .newTask__create-btn:hover {
-  cursor: pointer;
-  background-color: green;
-  box-shadow: 0 10px 20px red;
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.newTask__create-btn:active {
+  transform: translateY(0px);
+  opacity: 0.85;
+}
+
+/* Small screens */
+@media (max-width: 420px) {
+  .newTask__modal {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .newTask__priority-box {
+    padding: 10px;
+  }
 }

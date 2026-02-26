@@ -27,43 +27,43 @@ function NewTask({ onClose, onAddTask }) {
     <div className="newTask__background">
       <div className="newTask__modal">
         <form className="newTask__form" onSubmit={handleSubmit}>
-          
-          <button
-            type="button"
-            onClick={onClose}
-            className="newTask__cls-btn"
-          >
-            X
-          </button>
+          <div className="newTask__header">
+            <h2 className="newTask__title">New Task</h2>
+            <button
+              type="button"
+              onClick={onClose}
+              className="newTask__cls-btn"
+            >
+              X
+            </button>
+          </div>
+          <div className="newTask__input-box">
+            <label htmlFor="task-name" className="newTask__input-label">
+              Task Name:
+              <input
+                id="task-name"
+                type="text"
+                className="newTask__input newTask__name-input"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </label>
 
-          <label htmlFor="task-name" className="newTask__name-label">
-            Task Name:
-            <input
-              id="task-name"
-              type="text"
-              className="newTask__name-input"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-            />
-          </label>
-
-          <label
-            htmlFor="task-description"
-            className="newTask__description-label"
-          >
-            Task Description:
-            <input
-              id="task-description"
-              type="text"
-              className="newTask__description-input"
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-            />
-          </label>
+            <label htmlFor="task-description" className="newTask__input-label">
+              Task Description:
+              <input
+                id="task-description"
+                type="text"
+                className="newTask__input newTask__description-input"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+              />
+            </label>
+          </div>
 
           <div className="newTask__priority-box">
-            <p className="newTask__priority-text">Please Select One:</p>
+            <p className="newTask__priority-text">Priority:</p>
 
             <label htmlFor="high" className="newTask__label">
               <input
@@ -108,7 +108,6 @@ function NewTask({ onClose, onAddTask }) {
           <button type="submit" className="newTask__create-btn">
             + Create Task
           </button>
-
         </form>
       </div>
     </div>
