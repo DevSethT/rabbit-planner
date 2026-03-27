@@ -31,6 +31,7 @@
 /* Close button */
 .newTask__header {
   position: relative;
+  margin-bottom: 0;
 }
 
 .newTask__cls-btn {
